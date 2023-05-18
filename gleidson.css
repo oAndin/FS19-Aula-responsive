@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none, 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Desktop first */
+
+body {
+}
+
+header {
+  width: 100%;
+  background-color: blueviolet;
+  padding: 0 120px;
+}
+
+header .btn-menu {
+  display: none;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav ul {
+  display: flex;
+  gap: 26px;
+}
+
+header nav ul a {
+  display: block;
+  line-height: 40px;
+  margin: 10px 0;
+  color: #fff;
+}
+header .logo {
+  color: #fff;
+  font-weight: bold;
+  font-size: 28px;
+}
+.box {
+  width: 960px;
+  height: 100vh;
+  margin: 0 auto;
+  /* display: flex;
+    justify-content: center;
+    align-items: center; */
+  background-color: brown;
+  color: #fff;
+  padding: 1.5rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .box {
+    width: 100%;
+    background-color: blue;
+  }
+
+  header {
+    padding: 0 60px;
+  }
+  header .btn-menu {
+    display: block;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+  }
+  header .btn-menu {
+    color: #fff;
+    font-size: 28px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .box {
+    width: 100%;
+    background-color: yellow;
+  }
+  header .btn-menu {
+    display: block;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+  }
+  header .btn-menu {
+    color: #fff;
+    font-size: 28px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .box {
+    width: 100%;
+    background-color: green;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  header nav {
+    padding: 14px 0;
+    justify-content: center;
+  }
+
+  header nav ul {
+    width: calc(100% - 60px);
+    height: calc(100vh - 60px);
+    background-color: #fff;
+    position: fixed;
+    left: -100%;
+    top: 60px;
+    display: initial;
+    transition-duration: 300ms;
+  }
+  header nav ul.active {
+    left: 0;
+  }
+
+  header .btn-menu {
+    display: block;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+  }
+  header .btn-menu {
+    color: #fff;
+    font-size: 28px;
+  }
+}
